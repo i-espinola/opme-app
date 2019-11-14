@@ -1,0 +1,61 @@
+﻿@import "Source";
+
+table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+
+  > tfoot {
+    font-weight: bold;
+    color: $color-primary;
+  }
+
+  thead,
+  tbody,
+  tfoot {
+    tr {
+      line-height: 40px;
+      font-size: $font-size;
+
+      th {
+        border-top: $border-grey-large;
+        border-bottom: $border-grey-large;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        padding: 5px 15px;
+      }
+
+      td {
+        padding: 5px 15px;
+        border-bottom: 1px solid #eee;
+
+        &:first-child {
+          border-right: $border-light;
+        }
+      }
+
+      & .fit-col {
+        width: 1%;
+        white-space: nowrap;
+      }
+
+      & .avatar {
+        > img {
+          height: 150px;
+          width: auto;
+          border-radius: 50%;
+        }
+      }
+      .user-name {
+        font-size: 2em;
+        > h1 {
+          width: 99%;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          direction: ltr;
+        }
+      }
+    }
+  }
+}
